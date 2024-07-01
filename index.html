@@ -64,12 +64,7 @@
       color: rgb(255, 177, 59) !important;
     }
 
-    .fab {
-      /* background-color: rgb(108, 197, 175) !important; */
-      color: rgb(255, 177, 59) !important;
-    }
-
-    .fas {
+    .fab, .fa-regular, .fa-solid, .fa-brands, .fas{
       /* background-color: rgb(108, 197, 175) !important; */
       color: rgb(255, 177, 59) !important;
     }
@@ -80,6 +75,13 @@
 
     .resume-section{
       width: 70vw;
+    }
+
+    .hover_info{
+      font-size: 24px;
+      color: rgb(255, 177, 59);
+      font-family: 'Saira Extra Condensed', sans-serif;
+      height: 40px;
     }
   </style>
 </head>
@@ -146,20 +148,28 @@
         </div>
         <div class="social-icons d-flex align-items-center">
           <a href="https://github.com/seasign10"
-            target='_blank'>
+            target='_blank' data-value="Github">
             <i class="fab fa-github"></i>
           </a>
           <a href="https://blog.naver.com/koi7440"
-            target='_blank'>
+            target='_blank' data-value="Naber_Blog">
             <i class="fas fa-blog"></i>
           </a>
           <a href="https://www.instagram.com/whalee_in/?hl=ko"
-            target='_blank'>
+            target='_blank' data-value="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
           <a href="https://www.figma.com/proto/8TlkNi9QEcFd50mjVccrKT/figma_portfolio?page-id=0%3A1&type=design&node-id=1-90&viewport=-119%2C249%2C0.39&t=xkgzNF2CS0aZFmjT-1&scaling=scale-down&starting-point-node-id=1%3A90&mode=design"
-            target='_blank'>
+            target='_blank' data-value="Figma">
             <i class="fab fa-brands fa-figma"></i>
+          </a>
+          <a href="https://wise-ground-d8f.notion.site/84ca3ace29e946c689b913889afe69f5?v=ccd41be442f84efca291d9bdb1c9f1f0&pvs=4"
+            target='_blank' data-value="Notion_Note">
+            <i class="fa-solid fa-book"></i>
+          </a>
+          <a href="https://wise-ground-d8f.notion.site/de45861ed18c479f9aaa0f8c4feb573c?v=dd84bb44f6e64b2dba82ed1563be00fb&pvs=4"
+            target='_blank' data-value="Notion_Organize">
+            <i class="fa-regular fa-floppy-disk"></i>
           </a>
           <!-- <div class="d-flex justify-content-center rounded" style="padding-top: 4px; background-color: rgb(189, 43, 55); width: 80px; height: 48px;">
             <div class="d-grid" style="font-weight: bold; color: rgb(255, 163, 59);">
@@ -168,6 +178,7 @@
             </div>
         </div> -->
         </div>
+        <span class="hover_info"></span>
       </div>
     </section>
 
@@ -630,6 +641,21 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <script>
+    const iconBtn = document.querySelectorAll('.social-icons a');
+    const hoverInfo = document.querySelector('.hover_info');
+    for(let i=0;i<iconBtn.length;i++){
+      iconBtn[i].addEventListener('mouseover', function(){
+        const text = iconBtn[i].getAttribute('data-value');
+        hoverInfo.style.marginLeft = `${i*72}px`;
+        hoverInfo.innerHTML = text;
+      })
+      iconBtn[i].addEventListener('mouseout', function(){
+        hoverInfo.innerHTML = ''
+      })
+    }
   </script>
 
 </body>
