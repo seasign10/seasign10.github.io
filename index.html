@@ -30,6 +30,11 @@
       /* background-color: rgb(235, 82, 95); */
     }
 
+    .section_container {
+      width: 100%;
+      align-items: center;
+    }
+
     .Lee {
       /* color: rgb(172, 224, 103); */
       color: rgb(255, 177, 59);
@@ -74,14 +79,35 @@
     }
 
     .resume-section{
-      width: 70vw;
+      width: 79vw;
     }
-
+    
     .hover_info{
       font-size: 24px;
       color: rgb(255, 177, 59);
       font-family: 'Saira Extra Condensed', sans-serif;
       height: 40px;
+    }
+
+    .portfolio_container a{
+      color: #fff;
+    }
+    
+    @media (max-width: 991px){
+      .resume-section{
+        width: 90vw;
+      }
+      .text-monospace.rounded-pill{
+        border-radius: 10px !important;
+        padding: 3rem !important;
+      }
+      .text_produce{
+        padding: 0 !important;
+      }
+      .portfolio_container{
+        display: flex;
+        flex-direction: column !important;
+      }
     }
   </style>
 </head>
@@ -124,7 +150,7 @@
   </nav>
 
   <!-- <div class="d-flex flex-column align-items-center p-0"> -->
-  <div class="d-flex flex-column p-0">
+  <div class="d-flex flex-column p-0 section_container">
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
@@ -136,7 +162,7 @@
           <a class="text-decoration-none text-warning" href="mailto:seasign10@email.com">seasing10@gmail.com</a>
         </div>
         <div class="lead light text-monospace mb-5 p-5 rounded-pill">
-          <p class="m-1" style="padding-left: 15%; padding-right: 15%;">
+          <p class="m-1 text_produce" style="padding-left: 15%; padding-right: 15%;">
             　I am a painting art major who took a leave of absence from graduate mokwon university.
             Also worked in education and art and learned programming.
             　My advantage is that I’m a quick learner with unique ideas and creativity. I learned programming from ssafy, and I knew how to handle Python, Django, Html, JavaScript, Vuejs. In the project, I focused on UX planning, design, and front-end.
@@ -187,7 +213,7 @@
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
         <h1 class="mb-5 text-info">Experience</h1>
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div class="portfolio_container resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <!-- <h3 class="mb-1">Project In Ssafy</h3> -->
             <div class="subheading pink-box rounded-top p-2">#1.Bamsaem
