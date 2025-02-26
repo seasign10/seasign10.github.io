@@ -1,13 +1,7 @@
 // survice_key
-window.ENV = {
-  apikey: 'YOUR_API_KEY',
-  vworld_apikey: 'YOUR_VWORLD_APIKEY',
-  NAVER_API_CLIENT_ID: 'YOUR_NAVER_API_CLIENT_ID',
-};
-
-const API_KEY = window.ENV.apikey;
+const API_KEY = window.ENV.API_KEY;
 const NAVER_API_CLIENT_ID = window.ENV.NAVER_API_CLIENT_ID;
-const VWORLD_API_KEY = window.ENV.vworld_apikey;
+const VWORLD_API_KEY = window.ENV.VWORLD_API_KEY;
 
 console.log(API_KEY);
 console.log(NAVER_API_CLIENT_ID);
