@@ -1,9 +1,8 @@
 // survice_key
 const config = {
-  apikey: process.env.API_KEY,
-  vworld_apikey: process.env.VWORLD_APIKEY,
-  NAVER_API_CLIENT_ID: process.env.NAVER_API_CLIENT_ID,
-  // NAVER_API_KEY: process.env.NAVER_API_KEY
+  apikey: 'YOUR_API_KEY',
+  vworld_apikey: 'YOUR_VWORLD_APIKEY',
+  NAVER_API_CLIENT_ID: 'YOUR_NAVER_API_CLIENT_ID',
 };
 
 export default config;
