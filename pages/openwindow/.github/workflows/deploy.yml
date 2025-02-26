@@ -1,3 +1,5 @@
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches: [ master ]
@@ -15,8 +17,8 @@ jobs:
           NAVER_API_CLIENT_ID: ${{ secrets.NAVER_API_CLIENT_ID }}
           VWORLD_API_KEY: ${{ secrets.VWORLD_API_KEY }}
         run: |
-          echo "window.ENV = {" > public/pages/openwindow/env.js
-          echo "  API_KEY: '${API_KEY}'," >> public/pages/openwindow/env.js
-          echo "  NAVER_API_CLIENT_ID: '${NAVER_API_CLIENT_ID}'," >> public/pages/openwindow/env.js
-          echo "  VWORLD_API_KEY: '${VWORLD_API_KEY}'" >> public/pages/openwindow/env.js
-          echo "};" >> public/pages/openwindow/env.js
+          echo "window.ENV = {" > pages/openwindow/env.js
+          echo "  API_KEY: '${API_KEY}'," >> pages/openwindow/env.js
+          echo "  NAVER_API_CLIENT_ID: '${NAVER_API_CLIENT_ID}'," >> pages/openwindow/env.js
+          echo "  VWORLD_API_KEY: '${VWORLD_API_KEY}'" >> pages/openwindow/env.js
+          echo "};" >> pages/openwindow/env.js
