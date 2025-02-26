@@ -1,0 +1,447 @@
+/* reset */
+*{margin: 0; padding: 0;}
+html, body{height: 100%; width: 100%; overflow-x: hidden;}
+/* body{display: flex;flex-direction: column;justify-content: space-between;} */
+body{position: relative;
+  /* display: flex;flex-direction: column; */
+}
+ul, ol, li, dl, dt, dd{list-style: none; padding: 0; margin: 0;}
+a{color: black; text-decoration: none;}
+
+/* basic */
+.df{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.df-c{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.d-ib{
+  display: inline-block;
+}
+.g-f{
+  font-family: "Hahmlet", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.hidden{
+  font-size: 0;
+  font-weight: 0;
+  width: 0;
+  height: 0;
+  text-indent: -9999px;
+}
+.strong{
+  font-weight: 700;
+}
+.space{
+  margin-left: 1rem;
+}
+
+
+/* header */
+header#header{
+  /* flex-grow: 1; */
+}
+header .logo{
+  font-size: 40px;
+  align-items: start;
+  margin: 0 1rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+}
+header .en_logo{
+  font-size: 16px;
+  font-weight: 300;
+  justify-content: start;
+}
+header .tap{
+  padding: 1rem;
+  font-size: 28px;
+  margin-top: 2rem;
+}
+header .tap li{
+  font-weight: 200;
+  padding: 0 1rem 0.3rem 1rem;
+}
+header .tap li:hover{
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+header .tap li.on{
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+
+/* container */
+main#container{
+  /* 부모가 inline-block 이거나, overflow: auto, flex이면서 column이면 자식의 크기를 따라간다. */
+  display: inline-block;
+  width: 100%;
+  margin: 3rem 0 3rem 0;
+  /* flex-grow: 1; */
+}
+main#container .posi_box{
+  width: 100%;
+  height: 100%;
+}
+main#container .content{
+  display: none;
+  width: 80%;
+}
+main#container .content.on{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+main#container #product.content.on{
+  width: 100%;
+}
+.banner{
+  position: relative;
+  background: url('../src/img1.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 460px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  /* flex-shrink: 0; */
+}
+.banner .banenr_gradiant{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(255, 255, 255) 4px, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+}
+.banner_title{
+  position: absolute;
+  bottom: 4%;
+  color: white;
+  left: 4%;
+}
+main .context{
+  width: 100%;
+  margin-top: 1rem;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 2rem;
+}
+.context .strong{
+  background-color: rgb(226, 224, 198);
+}
+.context .greet:first-child{
+  font-weight: 900;
+}
+.context .greet{
+  font-size: 24px;
+}
+.context_text{
+  background-color: #f3f2e9a3;
+  padding: 3rem;
+}
+.location_info{
+  padding-top: 4rem;
+}
+.location_info h3{
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+.first_title{
+  font-size: 130%;
+}
+.address{
+  margin-bottom: 1rem;
+  word-break: keep-all;
+}
+.contact{
+  margin: 2rem 0;
+  font-size: 28px;
+  background-color: #f3f2e9a3;
+  padding: 1rem;
+  justify-content: space-around;
+}
+.contact>p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  display: inline-block;
+  margin: 0.5rem 0;
+  border-bottom: none;
+}
+.slash{
+  margin: 0 0.3rem;
+  color: silver;
+}
+#map {
+  width:100%;
+  height:300px;
+}
+/* 원단 종류 */
+#product>h4:first-child{
+  font-weight: 0;
+  line-height: 36px;
+  margin-bottom: 2rem;
+}
+#product>h4:first-child>span{
+  background-color: rgb(226, 224, 198);
+}
+#product>p:nth-child(2){
+  background-color: #f3f2e9a3;
+  padding: 1rem;
+}
+.fabrics dl img{
+  width: 100%;
+  height: 300px;
+}
+.product_tap{
+}
+.product_tap ul{
+  display: none;
+}
+.product_tap ul.active{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  justify-content: center;
+  align-items: center;
+}
+.product_tap ul>li{
+  flex-wrap: wrap;
+  margin: 0.5rem;
+}
+li.card.fabrics{
+  margin-bottom: 1rem;
+}
+.product_tap .card-title{
+  font-size: 24px;
+}
+.product_tap .card-footer{
+  font-size: 18px;
+}
+.product_tap .card-footer span{
+  font-weight: 700;
+}
+.product_tap .card-footer p{
+  margin: 0;
+}
+.product_tap li.card{
+  width: 18rem;
+}
+.pd_tap{
+  justify-content: space-around;
+  width: 40%;
+}
+.pd_tap>.tap{
+  padding: 0.8rem;
+  background-color: #fff;
+  color: rgb(37, 37, 37);
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  text-wrap: nowrap;
+}
+.pd_tap>.tap.on{
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  border: none;
+}
+.card-body>div{
+  text-align: end;
+}
+/* modal */
+.modal_background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.modal{
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  max-width: 600px;
+  height: 96%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.modal_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+}
+.modal_title{
+  display: inline-block;
+  margin: 0;
+}
+.modal_body{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.modal_body>img{
+  width: 90%;
+  height: 80%;
+}
+.contact>p{
+  white-space: nowrap;
+}
+.contact>.strong{
+white-space: nowrap;
+margin-right: 0.5rem;
+}
+.modal_text{
+  text-align: center;
+  margin: 0 1rem 0.2rem 1rem;
+  color: rgb(44, 41, 41);
+  background-color: #e0e0e0;
+}
+
+
+/* footer */
+#footer{
+  /* flex-grow: 1; */
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(227, 227, 227);
+}
+#footer .footer_grid{
+  /* 기본적으로 box-sizing은 content-box
+  이 경우, padding과 border는 요소의 전체 너비에 포함되지 않고, 요소의 실제 너비에 추가
+  >>> box-sizing: border-box : padding과 border가 요소의 전체 너비에 포함되므로,
+  width: 100% 설정 시 요소가 부모 요소를 초과하여 삐져나가는 문제를 해결 
+  */
+  display: block;
+  padding: 2rem;
+  z-index: 1;
+  
+  color: gray;
+  font-size: 14px;
+  font-weight: 100;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+
+  word-break:normal;
+}
+.footer_title{
+  font-weight: 400;
+}
+#footer ul li{
+}
+
+@media(max-width: 720px){
+  .contact{
+    flex-direction: column;
+    align-items: start;
+  }
+  .modal{
+    max-width:none;
+    /* width: 70%; */
+    height: 80%;
+  }
+  .banner{
+    height: 300px;
+  }
+  .contact>p{
+    display: block;
+    width: 260px;
+    border-bottom: 1px solid #bab89fa3;
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+  .slash{
+    display: none;
+  }
+}
+@media(max-width: 600px){
+  .context_text{
+    padding: 1.5rem;
+  }
+}
+@media(min-width: 481px) and (max-width: 562px){
+  .banner{border-radius: 0;}
+  main#container .posi_box .content{
+    width: 100%;
+  }
+  .context_text{
+    margin: 1rem;
+  }
+  .location_info>h3{margin: 1rem;}
+  .location_info>.address{margin: 1rem;}
+  .footer_title.slash{
+    display: none;
+  }
+  .product_tap li.card{
+    width: 80%;
+  }
+}
+@media (min-width:1px) and (max-width: 480px){
+  .modal{
+    width: 90%;
+  }
+  .contact>p{
+    width: 90%;
+  }
+  .banner{border-radius: 0;}
+  main#container .posi_box .content{
+    width: 100%;
+  }
+  .context_text{
+    margin: 1rem;
+  }
+  .location_info>h3{margin: 1rem;}
+  .location_info>.address{margin: 1rem;}
+  .footer_title.slash{
+    display: none;
+  }
+  .product_tap li.card{
+    width: 40%;
+  }
+  .product_tap .card-title{
+    font-size: 16px;
+    margin: 0;
+  }
+  .product_tap .card-footer{
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .card-body{
+  padding: 0.2rem;
+  text-align: center;
+  }
+  .card-body>div{
+  text-align: center;
+  margin-bottom: 0.2rem;
+  }
+  .card-text{
+    margin-bottom: 0.2rem;
+  }
+  .pd_tap{
+    width: 60%;
+  }
+  .card-footer{
+    text-align: center;
+    padding: 0.2rem;
+  }
+}
