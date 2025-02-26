@@ -1,15 +1,13 @@
 // survice_key
-const config = {
+window.ENV = {
   apikey: 'YOUR_API_KEY',
   vworld_apikey: 'YOUR_VWORLD_APIKEY',
   NAVER_API_CLIENT_ID: 'YOUR_NAVER_API_CLIENT_ID',
 };
 
-export default config;
-
-const API_KEY = config.apikey;
-const NAVER_API_CLIENT_ID = config.NAVER_API_CLIENT_ID;
-const VWORLD_API_KEY = config.vworld_apikey;
+const API_KEY = window.ENV.apikey;
+const NAVER_API_CLIENT_ID = window.ENV.NAVER_API_CLIENT_ID;
+const VWORLD_API_KEY = window.ENV.vworld_apikey;
 
 // base | 새로고침 시, window 가장 위로
 window.onload = function(){

@@ -1,0 +1,22 @@
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Create env.js file
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          NAVER_API_CLIENT_ID: ${{ secrets.NAVER_API_CLIENT_ID }}
+          VWORLD_API_KEY: ${{ secrets.VWORLD_API_KEY }}
+        run: |
+          echo "window.ENV = {" > public/env.js
+          echo "  API_KEY: '${API_KEY}'," >> public/env.js
+          echo "  NAVER_API_CLIENT_ID: '${NAVER_API_CLIENT_ID}'," >> public/env.js
+          echo "  VWORLD_API_KEY: '${VWORLD_API_KEY}'" >> public/env.js
+          echo "};" >> public/env.js
