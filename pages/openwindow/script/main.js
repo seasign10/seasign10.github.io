@@ -9,6 +9,10 @@ const API_KEY = window.ENV.apikey;
 const NAVER_API_CLIENT_ID = window.ENV.NAVER_API_CLIENT_ID;
 const VWORLD_API_KEY = window.ENV.vworld_apikey;
 
+console.log(API_KEY);
+console.log(NAVER_API_CLIENT_ID);
+console.log(VWORLD_API_KEY);
+
 // base | 새로고침 시, window 가장 위로
 window.onload = function(){
   setTimeout(function(){
